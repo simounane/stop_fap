@@ -1,0 +1,30 @@
+<!-- /mon_journal_de_progression/templates/index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Journal de Progression</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Mon Journal de Progression</h1>
+        <div id="timer">
+            <p>Temps depuis le début de l'abstinence : <span id="elapsed-time"></span></p>
+            <p>Temps restant jusqu'à l'objectif : <span id="remaining-time"></span></p>
+        </div>
+        <div id="journal">
+            <h2>Mon Journal de bord</h2>
+            <textarea id="journal-entry" placeholder="Écrivez sur votre journée..."></textarea>
+            <button id="save-journal">Sauvegarder</button>
+        </div>
+        <div id="quote">
+            <h2>Citation Motivante</h2>
+            <button id="get-quote">Help</button>
+            <p id="motivational-quote"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
